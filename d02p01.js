@@ -25,7 +25,8 @@ let checksum = 0;	// declare variable to sum the difference values of each row
 /* start loop to operate on each row of array.
  */
 for (var x=0;x<matrix.length;x++) {
-    minmaxDiff=(Math.max(...matrix[x]) - Math.min(...matrix[x])); /* The Math function identifies the min/max values of the array. (...matrix[x]) converts array in row x to distinct variables that are recognized as numbers by the Math function. */
+    minmaxDiff=(Math.max(...matrix[x]) - Math.min(...matrix[x])); /* The Math function identifies the min/max values of the array. 
+    Using spread syntax (...matrix[x]) converts the array in row x into distinct variables that are recognized as numbers by the Math function. */
     checksum += minmaxDiff; // adds current (max-min) difference to checksum in each iteration.
 };
 console.log(checksum);
